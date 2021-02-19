@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DashBoard</string>
+    <string name="downloadSuccess">DownLoad successful</string>
+    <string name="downloadFailure">DownLoad Failure</string>
+    <string name="startClashText">Start Clash</string>
+    <string name="restartClashText">Restart Clash</string>
+    <string name="stopClashText">Stop Clash</string>
+    <string name="subscriptionManagementItemText">Subscription Management</string>
+    <string name="checkIPItemText">Check IP</string>
+    <string name="dashBoardItemText">DashBoard</string>
+</resources>

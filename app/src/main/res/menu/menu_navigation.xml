@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashBoardItem"
+        android:title="@string/dashBoardItemText"
+        android:icon="@drawable/ic_baseline_desktop"/>
+    <item
+        android:id="@+id/checkIPItem"
+        android:title="@string/checkIPItemText"
+        android:icon="@drawable/ic_baseline_internet"/>
+    <item
+        android:id="@+id/modifyConfigurationItem"
+        android:title="自动修改配置"
+        android:icon="@drawable/ic_baseline_edit"/>
+    <item
+        android:id="@+id/subscriptionManagementItem"
+        android:title="@string/subscriptionManagementItemText"
+        android:icon="@drawable/ic_baseline_cloud_download"/>
+    <item
+        android:id="@+id/updateGeoIPDatabaseItem"
+        android:title="更新 GeoIp"
+        android:icon="@drawable/ic_database"/>
+    <item
+        android:id="@+id/downLoadYACDItem"
+        android:title="下载/更新 本地面板"
+        android:icon="@drawable/ic_baseline_save"/>
+
+
+</menu>

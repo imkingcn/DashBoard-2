@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">DashBoard</string>
+    <string name="downloadSuccess">下载成功</string>
+    <string name="downloadFailure">下载失败</string>
+
+    <string name="CDN" translatable="false">https://dl.hdjcmc.club/</string>
+    <string name="GeoIPURL" translatable="false">https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb</string>
+    <string name="yacdURL" translatable="false">https://github.com/haishanh/yacd/archive/gh-pages.zip</string>
+
+    <string name="ConfigDir" translatable="false">/data/clash</string>
+    <string name="ConfigFile" translatable="false">/config.yaml</string>
+    <string name="SubscriptionFile" translatable="false">/sub.txt</string>
+    <string name="GeoIPDatabaseFile" translatable="false">/Country.mmdb</string>
+
+
+
+    <string name="startClashText">启动 Clash</string>
+    <string name="stopClashText">停止 Clash</string>
+    <string name="restartClashText">重启 Clash</string>
+
+
+    <string name="startClashCmd" translatable="false">disABpath=/data/adb/modules/Clash_For_Magisk/disable; rm -f ${disABpath};</string>
+    <string name="stopClashCmd" translatable="false">disABpath=/data/adb/modules/Clash_For_Magisk/disable; touch ${disABpath};</string>
+    <string name="restartClashCmd" translatable="false">disABpath=/data/adb/modules/Clash_For_Magisk/disable; uidPath=/data/clash/run/clash.pid; touch ${disABpath}; while [ -f ${uidPath} ] ;do sleep 1 ; done; rm -f ${disABpath};</string>
+
+    <string name="subscriptionManagementItemText">订阅管理</string>
+    <string name="checkIPItemText">IP 检测</string>
+    <string name="dashBoardItemText">管理面板</string>
+</resources>

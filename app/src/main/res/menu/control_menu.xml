@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/startClash"
+        android:title="@string/startClashText"/>
+    <item
+        android:id="@+id/stopClash"
+        android:title="@string/stopClashText"/>
+    <item
+        android:id="@+id/restartClash"
+        android:title="@string/restartClashText"/>
+</menu>
