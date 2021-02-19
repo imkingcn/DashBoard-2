@@ -242,7 +242,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        Toast.makeText(applicationContext,"开始执行命令",Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext,"已执行命令",Toast.LENGTH_SHORT).show()
         when (item.itemId) {
             R.id.startClash -> cmdHelper.suCmd(getString(R.string.startClashCmd))
             R.id.stopClash -> cmdHelper.suCmd(getString(R.string.stopClashCmd))
