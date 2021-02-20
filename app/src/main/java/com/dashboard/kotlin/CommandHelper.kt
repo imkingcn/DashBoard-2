@@ -104,7 +104,7 @@ class CommandHelper(context: Context) {
         var os: DataOutputStream? = null
         var ls: DataInputStream? = null
         var result: String = ""
-        Log.d("suCmd", "Command is: $cmd")
+        Log.d("suCmd", "Command: $cmd")
         try {
             process = Runtime.getRuntime().exec("su")
             os = DataOutputStream(process.outputStream)
@@ -152,15 +152,21 @@ class CommandHelper(context: Context) {
         }
 
 
-
         grepR = suCmd("cat $confFilePath | grep \"external-controller\"")
         if (grepR == ""){
-            suCmd("sed -i '/^proxies/i external-controller: 127.0.0.1:63001' $confFilePath")
+            suCmd("sed -i '/^proxies/i external-controller: 127.0.0.1:9090' $confFilePath")
         }
         else{
             awkR = suCmd(" echo \"${grepR}\" | awk -F ' ' '{print \$2}' ")
-            if (awkR == ""){
-                suCmd("sed -i '/^external-controller/c external-controller: 127.0.0.1:63001' $confFilePath")
+            if ({
+                    val rePattren: String = context.getString(R.string.pattern)
+                    val isMacthed: Boolean = Regex(rePattren).matches(awkR)
+                    Log.i("re",rePattren)
+                    Log.i("re",isMacthed.toString())
+                    !isMacthed
+                }()
+            ){
+                suCmd("sed -i '/^external-controller/c external-controller: 127.0.0.1:9090' $confFilePath")
             }
 
         }
