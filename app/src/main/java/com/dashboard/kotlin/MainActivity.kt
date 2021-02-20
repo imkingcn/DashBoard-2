@@ -162,6 +162,9 @@ class MainActivity : AppCompatActivity() {
                         handler.post(Runnable {
                             Toast.makeText(applicationContext,
                             "安装完成", Toast.LENGTH_LONG).show()
+
+                            webView.loadUrl(cmdHelper.getDashBoardURL())
+
                         })
                     }.start()
 
