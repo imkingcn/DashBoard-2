@@ -202,4 +202,17 @@ class CommandHelper(context: Context) {
     }
 
 
+
+    fun getDashBoardURL(): String {
+        return "http://" + suCmd(
+            "grep \"external-controller\" " +
+                    context.getString(R.string.ConfigDir)+context.getString(R.string.ConfigFile) +
+                    "| awk -F ' ' '{print \$2}'") +
+                "/ui"
+
+
+    }
+
+
+
 }

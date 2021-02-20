@@ -47,11 +47,6 @@ class MainActivity : AppCompatActivity() {
             File(dataDir,"started").createNewFile()
         }
 
-        val dashBoardURL: String = "http://" + cmdHelper.suCmd(
-                "grep \"external-controller\" " +
-                        getString(R.string.ConfigDir)+getString(R.string.ConfigFile) +
-                        "| awk -F ' ' '{print \$2}'") +
-                "/ui"
 
 
 
@@ -116,7 +111,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.checkIPItem -> webView.loadUrl("https://ip.skk.moe/")
                 R.id.dashBoardItem -> {
-                    webView.loadUrl(dashBoardURL)
+                    webView.loadUrl(cmdHelper.getDashBoardURL())
                 }
                 R.id.updateGeoIPDatabaseItem -> {
                     Toast.makeText(applicationContext,"GeoIP 开始下载",Toast.LENGTH_SHORT).show()
@@ -202,7 +197,7 @@ class MainActivity : AppCompatActivity() {
 
         //<editor-fold desc="WebView">
         // WebView
-        Log.i("URL",dashBoardURL)
+        Log.i("URL",cmdHelper.getDashBoardURL())
         webView = findViewById(R.id.webView)
         webView.settings.javaScriptEnabled = true
         webView.settings.javaScriptCanOpenWindowsAutomatically = true
@@ -211,7 +206,7 @@ class MainActivity : AppCompatActivity() {
         webView.settings.allowFileAccess = true
         webView.settings.saveFormData = true
         webView.webViewClient = MyWebViewClient()
-        webView.loadUrl(dashBoardURL)
+        webView.loadUrl(cmdHelper.getDashBoardURL())
         //</editor-fold>
 
 
