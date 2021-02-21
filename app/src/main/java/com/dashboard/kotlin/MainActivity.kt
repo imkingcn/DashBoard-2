@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             for (trydir in dirArray){
                 val suCmdR: String = cmdHelper.suCmd("if [ -d \"${trydir}\" ];then echo \"${trydir}\"; fi")
                 if (suCmdR != "") {
-                    cmdHelper.suCmd("mv $suCmdR "+getString(R.string.ConfigDir))
+                    cmdHelper.suCmd("cp -rfv $suCmdR "+getString(R.string.ConfigDir))
                     Toast.makeText(applicationContext,"配置文件已迁移到新目录",Toast.LENGTH_LONG).show()
                     break
                 }
