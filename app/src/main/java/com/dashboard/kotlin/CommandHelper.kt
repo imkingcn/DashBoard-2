@@ -195,7 +195,8 @@ class CommandHelper(context: Context) {
         awkR = suCmd("grep \"listen\" $confFilePath | awk -F ':' '{print \$3}'  ")
         if (awkR == ""){
             suCmd("sed -i '/^proxies/i " +
-                    "dns:\\n  enable: true\\n  ipv6: false\\n  listen: 0.0.0.0:1053\\n  enhanced-mode: redir-host \\n  default-nameserver: \\n    - 223.5.5.5 \\n  nameserver:\\n    - tls://dns.pub\\n    - tls://doh.pub\\n    # - tls://223.5.5.5\\n    # - tls://185.222.222.222\\n    - https://doh.pub/dns-query\\n    - https://dns.pub/dns-query\\n    - https://dns.alidns.com/dns-query\\n    - https://rubyfish.cn/dns-query\\n  fallback:\\n    # - tls://1.1.1.1\\n    # - tls://8.8.8.8\\n    - https://cloudflare-dns.com/dns-query\\n    - https://dns.google/dns-query\\n    - https://doh.dns.sb/dns-query\\n    - https://doh.opendns.com/dns-query\\n    - https://doh.pub/dns-query\\n    - https://dns.alidns.com/dns-query' " +
+                    "dns:\\n  enable: true\\n  ipv6: false\\n  listen: 0.0.0.0:1053\\n  enhanced-mode: redir-host \\n  default-nameserver: \\n    - 223.5.5.5\\n    - 119.29.29.29\\n  nameserver:\\n    - tls://223.5.5.5\\n    - tls://dot.pub\\n  fallback:\\n    - tls://1.1.1.1\\n    - tls://8.8.8.8" +
+                    "' " +
                     "$confFilePath")
         }
 
