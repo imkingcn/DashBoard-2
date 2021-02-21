@@ -23,7 +23,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Happy Chinese New Year -- Tony🐴BOT"
+        android:text="@string/navigationView_header_textView_Text"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="128dp" />
 </androidx.appcompat.widget.LinearLayoutCompat>

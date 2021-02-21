@@ -2,6 +2,8 @@
     <string name="app_name">DashBoard</string>
     <string name="downloadSuccess">下载成功</string>
     <string name="downloadFailure">下载失败</string>
+    <string name="navigationView_header_textView_Text" translatable="false">生命的最终奥义，不过就是活得自在罢了。</string>
+
 
     <string name="CDN" translatable="false">https://dl.hdjcmc.club/</string>
     <string name="GeoIPURL" translatable="false">https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb</string>
